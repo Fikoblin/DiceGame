@@ -4,6 +4,8 @@
  */
 package dicegame;
 
+import dicegame.players.Player;
+import dicegame.players.PlayerComputer;
 import java.util.Random;
 
 /**
@@ -23,7 +25,7 @@ public class DiceGame {
     public static void main(String[] args) {
         // TODO code application logic here
          int zgad = 0, rzut = 0;
-        PlayerComputer gracz = new PlayerComputer();
+        Player gracz = new PlayerComputer();
         do {
                 System.out.println("Rzucam kością");
                 rzut = losowanie();

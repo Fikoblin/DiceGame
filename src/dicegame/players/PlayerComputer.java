@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package dicegame;
+package dicegame.players;
 
 import java.util.Random;
 
@@ -12,7 +12,8 @@ import java.util.Random;
  */
 public class PlayerComputer extends Player {
 
-    int guess() {
+    @Override
+    public int guess() {
         Random los = new Random();
         return los.nextInt(6) + 1;
     }
