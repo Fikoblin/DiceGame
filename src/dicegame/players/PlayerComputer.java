@@ -12,6 +12,9 @@ import java.util.Random;
  */
 public class PlayerComputer extends Player {
 
+    public PlayerComputer() {
+    }
+    
     public PlayerComputer(String name) {
         super(name);
     }

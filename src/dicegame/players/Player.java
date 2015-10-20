@@ -5,6 +5,9 @@ public abstract class Player {
     public abstract int guess();
     private String name;
 
+    public Player() {
+    }
+
     public Player(String name) {
         this.name = name;
     }
