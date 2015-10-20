@@ -12,14 +12,13 @@ import java.util.Scanner;
  */
 public class PlayerHuman extends Player {
 
+    public PlayerHuman(String name) {
+        super(name);
+    }
     Scanner scan = new Scanner(System.in);
 
     @Override
     public int guess() {
         return scan.nextInt();
-    }
-
-    public PlayerHuman(String name) {
-        super(name);
     }
 }

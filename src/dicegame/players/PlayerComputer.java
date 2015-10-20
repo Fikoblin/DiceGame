@@ -12,14 +12,13 @@ import java.util.Random;
  */
 public class PlayerComputer extends Player {
 
+    public PlayerComputer(String name) {
+        super(name);
+    }
+
     @Override
     public int guess() {
         Random los = new Random();
         return los.nextInt(6) + 1;
     }
-
-    public PlayerComputer(String name) {
-        super(name);
-    }
-    
 }
