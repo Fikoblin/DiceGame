@@ -26,7 +26,7 @@ public class DiceGame {
         // TODO code application logic here
          int zgad = 0, rzut = 0;
         Player gracz = new PlayerComputer();
-        gracz.name = "Ziutek";
+        gracz.setName("Ziutek");
         do {
                 System.out.println("Rzucam kością");
                 rzut = losowanie();

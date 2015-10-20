@@ -3,7 +3,7 @@ package dicegame.players;
 public abstract class Player {
     
     public abstract int guess();
-    public String name;
+    private String name;
 
     public String getName() {
         return name;
