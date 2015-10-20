@@ -18,4 +18,8 @@ public class PlayerHuman extends Player {
     public int guess() {
         return scan.nextInt();
     }
+
+    public PlayerHuman(String name) {
+        super(name);
+    }
 }
