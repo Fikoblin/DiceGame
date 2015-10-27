@@ -20,7 +20,7 @@ public abstract class Player {
         if (name != null && !name.isEmpty()) {
             this.name = name;
         } else {
-            System.out.println("Imie nie nie moze byc puste");
+            throw new IllegalArgumentException();
         }
 
     }
