@@ -3,13 +3,13 @@ package dicegame.players;
 public abstract class Player {
 
     public abstract int guess();
-    private String name;
+    private String name = "Anonim";
 
     public Player() {
     }
 
     public Player(String name) {
-        this.name = name;
+        setName(name);
     }
 
     public String getName() {
