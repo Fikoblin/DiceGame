@@ -3,6 +3,7 @@ package dicegame.players;
 public abstract class Player {
 
     public abstract int guess();
+    
     private String name;
 
     public Player() {
@@ -12,16 +13,16 @@ public abstract class Player {
         this.name = name;
     }
 
-    public String getName() {
+   
+    public void setName(String name){ 
+ if(name!=null && !name.isEmpty() ) {
+            this.name = name;
+ } else {System.err.println("podaj  nazwe urzytkowanika");
+         this.name="Anonim";}
+
+    }
+     public String getName() {
         return name;
     }
 
-    public final void setName(String name) {
-        if (name != null && !name.isEmpty()) {
-            this.name = name;
-        } else {
-            throw new IllegalArgumentException();
-        }
-
-    }
 }

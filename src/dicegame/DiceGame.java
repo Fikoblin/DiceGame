@@ -6,6 +6,7 @@ package dicegame;
 
 import dicegame.players.Player;
 import dicegame.players.PlayerComputer;
+import dicegame.players.PlayerHuman;
 import java.util.Random;
 
 /**
@@ -23,14 +24,13 @@ public class DiceGame {
     }
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        
         int zgad = 0, rzut = 0;
-        Player gracz = new PlayerComputer("Ziutek");
-        try {
-        gracz.setName(null);
-        } catch(IllegalArgumentException ex) {
-            System.out.println("========Błąd=======");
-        }
+        Player gracz = new PlayerComputer();
+        
+        gracz.setName("");
+          
+               
         do {
             System.out.println("Rzucam kością");
             rzut = losowanie();
@@ -38,11 +38,13 @@ public class DiceGame {
             zgad = gracz.guess();
             System.out.println(zgad);
             if (rzut == zgad) {
-                System.out.println("Zgadłeś! Wylosowana liczba to " + rzut);
+                System.out.println("Zgadłeś "+gracz.getName()+ " Wylosowana liczba to " + rzut );
             } else {
                 System.out.println("Błąd! Spróbuj jeszcze raz");
+                
             }
             System.out.println("=============");
+            
 
         } while (rzut != zgad);
     }
