@@ -28,7 +28,6 @@ public class DiceGame {
         game.displayPlayers();
         
         game.play();
-
-
+        
     }
 }

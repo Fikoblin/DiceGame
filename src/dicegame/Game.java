@@ -6,6 +6,7 @@ package dicegame;
 
 import dicegame.players.Player;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -65,8 +66,14 @@ public class Game {
     
     public void displayPlayers() {
         
-        for (int i=0; i<players.size();++i) {
-            System.out.println(players.get(i).getName());
+        for (Player player : players) {
+            System.out.println(player.getName());
+        }
+        
+        Iterator <Player> it = players.iterator();
+        
+        while(it.hasNext()) {
+            System.out.println(it.next().getName());
         }
     }
 }
