@@ -27,11 +27,14 @@ public class Game {
         Random dice = new Random();
 
        int zgad = 0, rzut = 0;
+       
+       System.out.println("Rzucam kością");
+       rzut = dice.nextInt(6)+1;
         do {
-            System.out.println("Rzucam kością");
-            rzut = dice.nextInt(6)+1;
-            System.out.print(players.get(0).getName() + ": ");
-            zgad = players.get(0).guess();
+                       
+            for(int i=0;i<players.size();i++) {
+            System.out.print(players.get(i).getName() + ": ");
+            zgad = players.get(i).guess();
             System.out.println(zgad);
             if (rzut == zgad) {
                 System.out.println("Zgadłeś! Wylosowana liczba to " + rzut);
@@ -39,6 +42,9 @@ public class Game {
                 System.out.println("Błąd! Spróbuj jeszcze raz");
             }
             System.out.println("=============");
+            
+            
+            }
 
         } while (rzut != zgad);
     }
@@ -55,5 +61,12 @@ public class Game {
     
     public void addPlayer(Player player) {
         players.add(player);
+    }
+    
+    public void displayPlayers() {
+        
+        for (int i=0; i<players.size();++i) {
+            System.out.println(players.get(i).getName());
+        }
     }
 }

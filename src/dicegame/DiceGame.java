@@ -21,6 +21,12 @@ public class DiceGame {
         Game game = new Game();
         Player gracz = new PlayerComputer("Ziutek");
         game.addPlayer(gracz);
+        
+        Player gracz2 = new PlayerComputer("Janek");
+        game.addPlayer(gracz2);
+        
+        game.displayPlayers();
+        
         game.play();
 
 
