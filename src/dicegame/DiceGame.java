@@ -26,8 +26,10 @@ public class DiceGame {
         game.addPlayer(gracz2);
         
         game.displayPlayers();
-        
-        game.play();
+        game.removePlayer("Janek");
+        System.out.println("============");
+        game.displayPlayers();
+        //game.play();
         
     }
 }
