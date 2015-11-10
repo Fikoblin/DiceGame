@@ -79,11 +79,21 @@ public class Game {
 
     public void removePlayer(String name) {
 
-        for (int i = 0; i < players.size(); i++) {
+        /*for (int i = 0; i < players.size(); ++i) {
             if (players.get(i).getName() == name) {
                 players.remove(i);
             }
         }
+        */
+        
+        Iterator<Player> it = players.iterator();
+
+        while (it.hasNext()) {
+            if (it.next().getName().equals(name)) {
+                it.remove();
+            }
+        }
+
 
     }
 }
